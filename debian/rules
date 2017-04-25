@@ -2,9 +2,6 @@
 %:
 	dh $@ --parallel -- -Bdebian/build
 
-override_dh_auto_configure:
-	dh_auto_configure -- -DENABLE_SHARED=true
-
 override_dh_install:
 	mkdir -p debian/tmp/usr/lib/cmake/LibRingClient/
 	cp debian/build/libringclient.so.1.0.0 debian/tmp/usr/lib/
