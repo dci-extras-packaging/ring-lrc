@@ -1,0 +1,3 @@
+usr/include/*
+usr/lib/libringclient.so
+usr/lib/*/cmake/*

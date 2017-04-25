@@ -1,0 +1,24 @@
+Source: ring-lrc
+Priority: optional
+Maintainer: Rohan Garg <rohan@kde.org>
+Build-Depends: debhelper (>= 9), ring-dev
+Standards-Version: 3.9.8
+Section: libs
+Homepage: https://github.com/Elv13/ring-lrc/tree/work5
+
+Package: libringclient-dev
+Section: libdevel
+Architecture: any
+Depends: libringclient1 (= ${binary:Version}), ${misc:Depends}
+Description: libringclient is a client library for GNU Ring - development headers
+ libringclient is a client library for GNU Ring
+ .
+ This package contains the development headers for libringclient
+
+Package: libringclient1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libringclient is a client library for GNU Ring
+ libringclient is a client library for GNU Ring
+ .
+ This package contains the ring-lrc library
