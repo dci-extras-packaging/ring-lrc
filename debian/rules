@@ -1,12 +1,12 @@
 #!/usr/bin/make -f
 %:
-        dh $@ --parallel -- -Bdebian/build
+	dh $@ --parallel -- -Bdebian/build
 
 override_dh_auto_configure:
-        dh_auto_configure -- -DENABLE_SHARED=true
+	dh_auto_configure -- -DENABLE_SHARED=true
 
 override_dh_install:
-        mkdir -p debian/tmp/usr/lib
-        cp debian/build/libringclient.so.1.0.0 debian/tmp/usr/lib/
-        cp debian/build/libringclient.so debian/tmp/usr/lib/
-        dh_install
+	mkdir -p debian/tmp/usr/lib
+	cp debian/build/libringclient.so.1.0.0 debian/tmp/usr/lib/
+	cp debian/build/libringclient.so debian/tmp/usr/lib/
+	dh_install
