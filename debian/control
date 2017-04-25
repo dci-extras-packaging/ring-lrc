@@ -1,7 +1,11 @@
 Source: ring-lrc
 Priority: optional
 Maintainer: Rohan Garg <rohan@kde.org>
-Build-Depends: debhelper (>= 9), ring-dev
+Build-Depends: debhelper (>= 9),
+               qtbase5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               ring-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/Elv13/ring-lrc/tree/work5
@@ -17,7 +21,7 @@ Description: libringclient is a client library for GNU Ring - development header
 
 Package: libringclient1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: libringclient is a client library for GNU Ring
  libringclient is a client library for GNU Ring
  .
